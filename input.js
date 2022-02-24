@@ -18,6 +18,10 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
+  if (key === 'q') {
+    console.log('q key was pressed to send a highfive!');
+    connection.write('Say: Highfive!');
+  }
   if (key === 'w') {
     console.log('W key was pressed to go up!');
     connection.write('Move: up');
