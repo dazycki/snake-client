@@ -10,10 +10,11 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  // log when the client has connected to the server
+  // when the client has first connected to the server...
   conn.on('connect', () => {
     console.log('Successfully connected to game server.');
-    conn.write('Name: DNZ');
+    conn.write('Name: DNZ'); // sends initials to identify snake
+    // conn.write('Move: up'); // testing communication protocols
   });
 
   // interpret data from server
