@@ -14,7 +14,7 @@ const connect = function() {
   // when the client has first connected to the server...
   conn.on('connect', () => {
     console.log('Successfully connected to game server.');
-    conn.write(`Name: ${initials}`); // sends initials to identify snake
+    conn.write(initials); // sends initials to identify snake
     // conn.write('Move: up'); // testing communication protocols
   });
 
