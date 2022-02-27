@@ -1,7 +1,7 @@
 // CONST for connection
 const IP = 'localhost';
 const PORT = 50541;
-const initials = 'DNZ';
+const initials = 'Name: DNZ';
 
 // CONST for game input
 const UP = 'Move: up';
