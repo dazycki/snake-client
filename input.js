@@ -24,7 +24,7 @@ const handleUserInput = function(key) {
   const directionInput = function(key) {
     input = setInterval(() => {
       connection.write(key);
-    }, 100); // controls snake movement
+    }, 100); // controls speed of snake
   };
 
   // control to exit game
