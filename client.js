@@ -1,10 +1,11 @@
 const net = require("net");
+const { IP, PORT, initials } = require("./constants");
 
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
 
   // interpret incoming data as text
@@ -13,7 +14,7 @@ const connect = function() {
   // when the client has first connected to the server...
   conn.on('connect', () => {
     console.log('Successfully connected to game server.');
-    conn.write('Name: DNZ'); // sends initials to identify snake
+    conn.write(`Name: ${initials}`); // sends initials to identify snake
     // conn.write('Move: up'); // testing communication protocols
   });
 
